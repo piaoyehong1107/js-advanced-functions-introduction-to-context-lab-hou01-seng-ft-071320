@@ -42,7 +42,7 @@ function allWagesFor(obj){
     obj.timeInEvents.forEach(timeOut=>{
       (timeOut-timeIn)*obj.payPerHour
     }
-  })
+  }
 }
 function findEmployeeByFirstName(){
   
