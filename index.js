@@ -44,6 +44,7 @@ function allWagesFor(obj){
       total+=(timeOut-timeIn)*obj.payPerHour
     })
   })
+  return total
 }
 function findEmployeeByFirstName(){
   
