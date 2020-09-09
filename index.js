@@ -39,6 +39,7 @@ function wagesEarnedOnDate(obj,stamp){
 }
 function allWagesFor(obj){
   let total=0;
+  let i=0;
   for(i=0;i<obj.timeInEvents.length;i++){
     total+=((obj.timeOutEvents[i].hour-obj.timeInEvents[i].hour)/100)*(obj.payPerHour)
   }
