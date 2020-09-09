@@ -46,7 +46,7 @@ function allWagesFor(obj){
   return total;
 }
 
-function findEmployeeByFirstName(){
+function findEmployeeByFirstName(src, first){
   
 }
 function calculatePayroll(){
