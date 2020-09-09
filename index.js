@@ -54,7 +54,7 @@ function findEmployeeByFirstName(src, first){
 
 function calculatePayroll(src){
   let total=0
-  src.forEach(obj=>{
+  total+=src.forEach(obj=>{
     allWagesFor(obj)
   })
 }
