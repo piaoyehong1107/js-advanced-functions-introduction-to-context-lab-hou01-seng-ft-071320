@@ -25,10 +25,10 @@ function createTimeInEvent(obj,stamp){
 
 function createTimeOutEvent(obj,stamp){
   let timeArr=stamp.split(" ");
-   obj.timeOutEvents[0]={
+   obj.timeOutEvents.push({
      type: "TimeOut",
      hour: parseInt(timeArr[1]),
-     date: timeArr[0] }
+     date: timeArr[0] })
    return obj
 }
 function hoursWorkedOnDate(obj,stamp){
