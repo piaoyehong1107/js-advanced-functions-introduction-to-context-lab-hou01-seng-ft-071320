@@ -59,3 +59,10 @@ function calculatePayroll(src){
   })
   return total
 }
+function calculatePayroll(src){
+  let total=0
+  src.forEach( obj=>{
+  total += allWagesFor(obj)
+  })
+  return total
+}
