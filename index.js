@@ -16,19 +16,19 @@ function createEmployeeRecords(arr){
 }
 function createTimeInEvent(obj,stamp){
   let timeArr=stamp.split(" ");
-   obj.timeInEvents[0]={
+   obj.timeInEvents.push({
      type: "TimeIn",
      hour: parseInt(timeArr[1]),
-     date: timeArr[0] }
+     date: timeArr[0] })
    return obj
 }
 
 function createTimeOutEvent(obj,stamp){
   let timeArr=stamp.split(" ");
-   obj.timeOutEvents[0]={
+   obj.timeOutEvents.push({
      type: "TimeOut",
      hour: parseInt(timeArr[1]),
-     date: timeArr[0] }
+     date: timeArr[0] })
    return obj
 }
 function hoursWorkedOnDate(obj,stamp){
@@ -38,11 +38,33 @@ function wagesEarnedOnDate(obj,stamp){
   return hoursWorkedOnDate(obj)*obj.payPerHour
 }
 function allWagesFor(obj){
-  
+  let total=0;
+  let i=0;
+  for(i=0;i<obj.timeInEvents.length;i++){
+    total+=((obj.timeOutEvents[i].hour-obj.timeInEvents[i].hour)/100)*(obj.payPerHour)
+  }
+  return total;
 }
-function findEmployeeByFirstName(){
-  
+
+function findEmployeeByFirstName(src, first){
+ return src.find(obj=>{
+    return obj.firstName===first
+  })
 }
-function calculatePayroll(){
+
+function calculatePayroll(src){
+  let total=0
+  total+=src.forEach(obj=>{
+    allWagesFor(obj)
+  })
+  return total
+}
+
+function calculatePayroll(src){
+  let total=0;
   
+  src.forEach( obj=>{
+  total += allWagesFor(obj)
+  })
+  return total
 }
