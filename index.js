@@ -44,6 +44,7 @@ function allWagesFor(obj){
   }
   return total;
 }
+
 function findEmployeeByFirstName(){
   
 }
