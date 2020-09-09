@@ -41,7 +41,7 @@ function allWagesFor(obj){
   let total=0;
   obj.timeInEvents.forEach(timeIn=>{
     obj.timeOutEvents.forEach(timeOut=>{
-      total+=(timeOut-timeIn)*obj.payPerHour
+      total+=(timeOut.hour-timeIn.hour)*obj.payPerHour
     })
   })
   return total;
