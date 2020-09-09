@@ -47,7 +47,9 @@ function allWagesFor(obj){
 }
 
 function findEmployeeByFirstName(src, first){
-  
+  src.find(src.forEach(obj=>{
+    obj.firstName===first
+  }))
 }
 function calculatePayroll(){
   
