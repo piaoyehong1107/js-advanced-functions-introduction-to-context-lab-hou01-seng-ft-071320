@@ -38,7 +38,11 @@ function wagesEarnedOnDate(obj,stamp){
   return hoursWorkedOnDate(obj)*obj.payPerHour
 }
 function allWagesFor(obj){
-  
+  obj.timeInEvents.forEach(timeIn=>{
+    obj.timeInEvents.forEach(timeOut=>{
+      (timeOut-timeIn)*obj.payPerHour
+    }
+  })
 }
 function findEmployeeByFirstName(){
   
