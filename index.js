@@ -47,7 +47,7 @@ function allWagesFor(obj){
 }
 
 function findEmployeeByFirstName(src, first){
- return scr.find(obj=>{
+ return src.find(obj=>{
     return obj.firstName===first
   })
 }
